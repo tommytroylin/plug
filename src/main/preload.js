@@ -1,5 +1,6 @@
 const pubsub = require('../../modules/electron-pubsub');
 const is = require('electron-is');
+const isDev = require('electron-is-dev');
 
 global.plug = {
     // is
@@ -10,8 +11,8 @@ global.plug = {
     isLinux: is.linux(),
     isX86: is.x86(),
     isX64: is.x64(),
-    isProduction: is.production(),
-    isDev: is.dev(),
+    isProduction: !isDev,
+    isDev: isDev,
     isSandbox: is.sandbox(),
     isMas: is.mas(),
     isWindowsStore: is.windowsStore(),
