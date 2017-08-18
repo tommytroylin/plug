@@ -3,8 +3,6 @@ import path from 'path';
 import { format } from 'url';
 import { isDev, APP_PATH } from 'constants-nowa';
 
-console.log(APP_PATH);
-
 const PRELOAD_PATH = isDev
     ? path.join(process.cwd(), 'src', 'main', 'preload.js')
     : path.join(process.resourcesPath, 'app', 'preload.js');
